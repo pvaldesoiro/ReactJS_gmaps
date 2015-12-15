@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+import 'styles/map';
+
 export default class Gmap extends React.Component {
   constructor(props) {
     super(props);

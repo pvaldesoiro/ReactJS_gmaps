@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Gmap from './components/Gmap';
 
-require('./styles/page.css');
-require('./styles/map.css');
-require('./styles/menu.css');
+import 'styles/page';
+import 'styles/menu';
 
 const username = 'locafox';
 const password = 'LocaF#xes!';

@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
@@ -12,12 +12,14 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel'
       }, {
-        test: /\.css$/, loader: 'style-loader!css-loader'
+        test: /\.scss$/,
+        loader: 'style!css!sass!'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.scss'],
+    modulesDirectories: ['src', 'node_modules']
   },
   output: {
     path: __dirname + '/dist',
@@ -26,4 +28,5 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist'
-  }};
+  }
+};
